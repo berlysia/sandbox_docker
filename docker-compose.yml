@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      args:
+        APP_ROOT: /usr/src/app
+        APP_PORT: 3000
+    environment:
+      RAILS_ENV: development
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
